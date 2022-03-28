@@ -1,21 +1,19 @@
 <template>
     <div class="cardContainer">
-        <img :src='aboutImg' :alt='text' class="imgContainer">
-     </div>    
+        <img :src='aboutImg' :alt='text' class="imgContainer" >
+         
         <p class="aboutDescription">{{aboutDescription}}</p>
-   
+   </div>
 </template>
 <script>
 import '../../style/style.css'
     export default{
          props: {
             aboutDescription: { type: String, required: true },
-
+            aboutImg: {type: String},
     },
     data (){
         return{
-            // armar array para hacer un v-for con las img
-            aboutImg: require('../../Images/aboutCard1.png'),
             text:"imagen"
         }
     }
@@ -27,6 +25,7 @@ import '../../style/style.css'
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .imgContainer{
     filter: drop-shadow(12px 14px 13px rgba(0, 0, 0, 0.45));
@@ -38,5 +37,7 @@ import '../../style/style.css'
     width: 233px;
     color: var(--secondary-color);
     text-align: center;
+    margin: 0;
 }
+
 </style>

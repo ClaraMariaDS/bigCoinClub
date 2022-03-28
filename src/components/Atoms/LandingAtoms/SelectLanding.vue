@@ -68,5 +68,10 @@ export default {
     font-family: Ubuntu;
     font-weight:700;
 }
+@media (max-width: 600px) {
+.selectLanding{
+    width: 70vw;
+}
 
+}
 </style>

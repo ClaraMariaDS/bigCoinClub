@@ -31,4 +31,15 @@ export default {
      border-radius: 100px;
      background:var(--azul-principal);
     }
+  @media (max-width: 480px){
+    .sectionTitle{
+        font-size: 25px;
+        margin: -30px 0px 0px 15px;
+    }
+    .circle{
+      width: 34px;
+     height:34px;
+    }
+
+  }
 </style>

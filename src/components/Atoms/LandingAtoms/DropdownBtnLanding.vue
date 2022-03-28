@@ -1,19 +1,17 @@
 <template>
-<div>
-    
-</div>
+
     <ul class="menu">
    
-    <li @mouseover="listOne = true" @mouseleave="listOne = false" class="btnMenu" :class="{ btn__signIn: variant === 'signin',  btn__logIn: variant === 'login'}">
+    <li @mouseover="listOne = true" @mouseleave="listOne = false" class="btnMenu" :class="{ btn__signIn: variant === 'signin',  btn__logIn: variant === 'login', transparent: variant === 'transparent'}">
   
-      <a href="#" class="dropdown">{{btnText}} <img src="../../Images/iconoDropdown.png"> </a>
+      <a href="#" class="dropdown" :class="{transparent: variant === 'transparent'}">{{btnText}} <img src="../../Images/iconoDropdown.png"> </a>
 
       <transition name="fade">
         
         <ul v-if="listOne" @click="listOne = false">
           
-          <li class="dropdownItem"><a href="#" class="dropdownItem"> {{btnItem1}} </a></li>
-          <li class="dropdownItem"><a href="#" class="dropdownItem"> {{btnItem2}} </a></li>
+          <li class="dropdownItem" :class="{transparent: variant === 'transparent'}"><a href="#" class="dropdownItem"> {{btnItem1}} </a></li>
+          <li class="dropdownItem" :class="{transparent: variant === 'transparent'}"><a href="#" class="dropdownItem"> {{btnItem2}} </a></li>
 
         </ul>
       
@@ -51,13 +49,19 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 15px;
+  font-size: 1em;
 }
 
 .dropdownItem{
   display: block;
   color: var(--azul-principal);
   text-decoration: none;
+}
+.dropdownItem:hover{
+  font-size: 17px;
+}
+.transparent{
+  background: transparent;
 }
 .dropdown{
     display: flex;

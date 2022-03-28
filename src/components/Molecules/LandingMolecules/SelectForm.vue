@@ -12,7 +12,7 @@
 </div>    
 </template>
 <script>
-import SelectLanding from "./SelectLanding.vue";
+import SelectLanding from "../../Atoms/LandingAtoms/SelectLanding.vue";
 
 export default {
     name: 'SelectForm',
@@ -59,15 +59,14 @@ export default {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+background: linear-gradient(180deg, #144DF6 0%, #001D75 100%);
+border-radius: 5px;
+padding: 15px;
 }
 .select{
     display: flex;
     flex-direction: column;
     margin: 20px 20px 0px 20px;
-}
-.selectContainer{
-    display: flex;
-    
 }
 .btnDisabled{
     margin: 20px;
@@ -84,16 +83,16 @@ export default {
     background: #9898A0;
 }
 .usdtIcon{
-  width: 14px;
-  height: 13px;
-   position: absolute;
-margin: 42px 0px 0px 235px;
+    width: 14px;
+    height: 13px;
+    position: absolute;
+    margin: 42px 0px 0px 235px;
 }
 .textoUSDT{
- position: absolute;
-margin: 38px 0px 0px 255px;
-  color:var( --azul-principal);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    margin: 38px 0px 0px 255px;
+    color:var( --azul-principal);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .extraLabel{
     color: white;
@@ -101,5 +100,28 @@ margin: 38px 0px 0px 255px;
     font-weight: 700;
     position: absolute;
     margin: 0px 0px 0px 209px;
+}
+@media (max-width: 600px) {
+.selectContainer{
+    flex-direction: column;
+    width: 80vw;
+}
+.select{
+    width: 70vw;
+}
+.textoUSDT{
+    margin: 38px 0px 0px 50vw;
+}
+.usdtIcon{
+     margin: 42px 0px 0px 45vw;
+}
+.extraLabel{
+    margin: 0px 0px 0px 44vw;
+}
+}
+@media (max-width: 400px) {
+.extraLabel{
+    margin: 0px 0px 0px 34vw;
+}
 }
 </style>

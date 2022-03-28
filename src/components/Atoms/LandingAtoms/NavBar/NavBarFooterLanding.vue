@@ -36,4 +36,10 @@ export default {
         font-weight: 300;
         text-shadow: 0px 4px 8px #FFFFFF ;
     }
+    @media (max-width: 480px){
+        .link{
+            font-size: 10px;
+            margin: 0px 15px;
+        }
+    }
 </style>

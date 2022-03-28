@@ -21,7 +21,7 @@ export default {
       border:0;
       border-radius: 5px;
       color: white;
-      margin: 10px;
+      /* margin: 10px; */
     }
     .btn__empieza{
         background:var(--azul-principal);

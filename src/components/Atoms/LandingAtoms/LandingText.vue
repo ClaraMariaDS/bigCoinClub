@@ -19,17 +19,22 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito:wght@300;500&display=swap');
 
-    .text{
-        font-family: 'inter';
-        color:var(--secondary-color);;
-    }
-    .text__XL{
-      font-size: 20px;
-    }
-   .text__paragraph{
-      font-size: 15px;
-      width: 220px;
-      line-height: 18.15px;
-      text-align: justify;
-    }
+  .text{
+      font-family: 'inter';
+      color:var(--secondary-color);;
+  }
+  .text__XL{
+    font-size: 20px;
+  }
+  .text__paragraph{
+    font-size: 15px;
+    width: 220px;
+    line-height: 18.15px;
+    text-align: justify;
+  }
+@media (max-width: 480px) {
+.text{
+    font-size:13px;
+}
+}
 </style>

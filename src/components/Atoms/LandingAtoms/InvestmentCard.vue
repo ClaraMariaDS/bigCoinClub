@@ -1,7 +1,8 @@
 <template>
     <div class="cardContainer">
-        <img :src='investmentImg' :alt='text' class="imgContainer">
         <p class="investmentTitle">{{investmentTitle}}  <br/> {{'meses'}}</p>
+        <img :src='investmentImg' :alt='text' class="imgContainer">
+        
     </div>
 </template>
 <script>
@@ -26,18 +27,25 @@ import '../../style/style.css'
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10px;
+    width: 248px; 
+}
+.imgContainer{
+    box-shadow: 7px 6px 7px 0px #00000073;
 }
 .investmentTitle{
-   display: flex;
-   justify-content: center;
-   position: absolute;
     color: var(--secondary-color);
     text-transform: uppercase;
     font-family: Ubuntu;
     font-weight: 700;
     font-size: 30px;
     flex-wrap: wrap;
-   text-align: center;
+    text-align: center;
+    z-index:1;
+    position: relative;
+    left: 176px;
 }
+@media (max-width: 480px){
 
+}
 </style>
